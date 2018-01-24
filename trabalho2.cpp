@@ -19,14 +19,14 @@ int main() {
 }
 int gerardados(){
 	int distancia=0;
+	int carga=0;
 	while (distancia<=0 || distancia>3400){
 		x=rand()%3401;
 		y=rand()%3401;
 		distancia=sqrt((x)^2+(y)^2);
 	}
 	carga=rand()&1600;
-	return carga;
-	return distancia;
+	return [carga, distancia];
 }
 int calculartempo(int distancia){
 	int tempo=0;
