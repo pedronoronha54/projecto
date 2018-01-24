@@ -17,7 +17,7 @@ int main() {
 }
 
 }
-int gerardados(int x, int y, int distancia, int carga){
+int gerardados(){
 	int distancia=0;
 	while (distancia<=0 || distancia>3400){
 		x=rand()%3401;
@@ -26,9 +26,9 @@ int gerardados(int x, int y, int distancia, int carga){
 	}
 	carga=rand()&1600;
 }
-int calculartempo(int tempo, int distancia){
+int calculartempo(int distancia){
 	int tempo=0;
-	switch gerardados(x,y,distancia,carga){
+	switch (distancia){
 		case distancia<1000:
 		tempo=15;
 		break;
@@ -45,17 +45,15 @@ int calculartempo(int tempo, int distancia){
 			break;
 	}
 }
-int calcularvelocidademedia(int tempo, int distancia, int velocidade){
-	int velocidade=0;
-	velocidade=distancia/tempo;
+int calcularvelocidademedia(int tempo, int distancia){
+	int velocidade=distancia/tempo;
 }
-int calcularconsumo(int velocidade, int carga, int consumo){
-	int consumo=0;
-	consumo=velocidade*0.5+carga*0.4;
+int calcularconsumo(int velocidade, int carga){
+	int consumo=velocidade*0.5+carga*0.4;
 }
-int calculargastos(int consumo, int gastos){
+int calculargastos(int consumo){
 	int gastos=0;
-	switch (calcularconsumo (velocida,cara,consumo)){
+	switch (consumo){
 		case consumo<200:
 		gastos=7500;
 		break;
@@ -72,9 +70,9 @@ int calculargastos(int consumo, int gastos){
 			break;
 	}
 }
-int calcularganho(int carga, int ganho){
+int calcularganho(int carga){
 	int ganho=0;
-	switch (gerardados(x,y,distancia,carga)){
+	switch (carga){
 		case carga<500:
 		ganho=55;
 		break;
@@ -95,6 +93,5 @@ int calcularganho(int carga, int ganho){
 	}
 }
 int lucro(int gastos, int ganho){
-	int lucro=0;
-	lucro=ganho-gastos;
+	int lucro=ganho-gastos;
 }
