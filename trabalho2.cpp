@@ -25,6 +25,8 @@ int gerardados(){
 		distancia=sqrt((x)^2+(y)^2);
 	}
 	carga=rand()&1600;
+	return carga;
+	return distancia;
 }
 int calculartempo(int distancia){
 	int tempo=0;
@@ -44,12 +46,15 @@ int calculartempo(int distancia){
 		default:
 			break;
 	}
+	return tempo;
 }
 int calcularvelocidademedia(int tempo, int distancia){
 	int velocidade=distancia/tempo;
+	return velocidade;
 }
 int calcularconsumo(int velocidade, int carga){
 	int consumo=velocidade*0.5+carga*0.4;
+	return consumo;
 }
 int calculargastos(int consumo){
 	int gastos=0;
@@ -69,6 +74,7 @@ int calculargastos(int consumo){
 		default:
 			break;
 	}
+	return gastos;
 }
 int calcularganho(int carga){
 	int ganho=0;
@@ -91,7 +97,9 @@ int calcularganho(int carga){
 		default:
 			break;
 	}
+	return ganho;
 }
 int lucro(int gastos, int ganho){
 	int lucro=ganho-gastos;
+	return lucro;
 }
